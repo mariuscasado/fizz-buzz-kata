@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class Kata {
+public class FizzBuzzKata {
 
     public static void main(String[] args){
         List<String> listToPrint = getListOfNumbersAndStrings();
@@ -11,15 +10,15 @@ public class Kata {
 
     public static List<String> getListOfNumbersAndStrings() {
         List<String> numbers = new ArrayList<>();
-        for(int numToAdd= 1; numToAdd<=30; numToAdd++){
-            if(isThreeOrFiveMultiple(numToAdd))
+        for(int i= 1; i<=30; i++){
+            if(isThreeOrFiveMultiple(i))
                numbers.add("FizzBuzz");
-            else if(isThreeMultiple(numToAdd))
+            else if(isThreeMultiple(i))
                 numbers.add("Fizz");
-            else if(isFiveMultiple(numToAdd))
+            else if(isFiveMultiple(i))
                 numbers.add("Buzz");
             else
-                numbers.add(String.valueOf(numToAdd));
+                numbers.add(String.valueOf(i));
         }
 
         return numbers;
