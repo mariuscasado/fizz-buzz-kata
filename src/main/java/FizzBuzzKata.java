@@ -11,7 +11,7 @@ public class FizzBuzzKata {
     public static List<String> getListOfNumbersAndStrings() {
         List<String> numbers = new ArrayList<>();
         for(int i= 1; i<=30; i++){
-            if(isThreeOrFiveMultiple(i))
+            if(isThreeMultiple(i)&&isFiveMultiple(i))
                numbers.add("FizzBuzz");
             else if(isThreeMultiple(i))
                 numbers.add("Fizz");
@@ -22,13 +22,6 @@ public class FizzBuzzKata {
         }
 
         return numbers;
-    }
-
-    public static boolean isThreeOrFiveMultiple(int numToAdd){
-        if(numToAdd%3==0 && numToAdd%5==0)
-            return true;
-        else
-            return false;
     }
 
     public static boolean isThreeMultiple(int numToAdd){
